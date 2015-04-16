@@ -5,19 +5,33 @@ public partial class PlayerCharacter {
 	protected void UpdateMovement () {
 		var movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-		Debug.Log(string.Format("Updating Movement: {0},{1}", movementVector.x, movementVector.y));
+
+		// Face player in the direction of the mouse
+		var screenPos = Camera.main.WorldToScreenPoint(transform.position);
+		var mouseDir = Input.mousePosition - screenPos;
+		float mouseAngle = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg;
+		GameController.instance.MouseAngle = mouseAngle;
+
+		float vecX = 0, vecY = 0;
+
+		if(Mathf.Abs(mouseAngle) >= 45 && Mathf.Abs(mouseAngle) <= 135) vecY = 1.0f * Mathf.Sign(mouseAngle);
+		else if(Mathf.Abs(mouseAngle) < 90) vecX = 1.0f;
+		else vecX = -1.0f;
+
+		var lookDirection = new Vector2(vecX, vecY);
 
 		if(!GameController.instance.PlayerCanMove) {
 			movementVector = Vector2.zero;
 		}
 
+		foreach(var animator in animators) {
+			animator.SetBool("isWalking", (movementVector != Vector2.zero));
+			animator.SetFloat("DirectionX", lookDirection.x);
+			animator.SetFloat("DirectionY", lookDirection.y);
+		}
+
 		if(movementVector != Vector2.zero) {
 			// Player is moving
-			foreach(var animator in animators) {
-				animator.SetBool("isWalking", true);
-				animator.SetFloat("DirectionX", movementVector.x);
-				animator.SetFloat("DirectionY", movementVector.y);
-			}
 
 			rigidBody.MovePosition(rigidBody.position + movementVector * Time.deltaTime);
 
@@ -33,15 +47,19 @@ public partial class PlayerCharacter {
 
 	protected void FireWeapon() {
 		if(Input.GetMouseButtonDown(0)) {
-			//Debug.Log(string.Format("{0},{1},{2}", Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+			// Get the angle of the bullet
+			var bulletOffset = new Vector3(0.0f, -0.16f, 0.0f);
+			var bulletPos = transform.position + bulletOffset;
 
-			var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			var bulletPosOnScreen = Camera.main.WorldToScreenPoint(bulletPos);
+			var dir = Input.mousePosition - bulletPosOnScreen;
+			float bulletAngle = Mathf.Atan2(dir.y, dir.x);
+			
+			bulletPos.x += Mathf.Cos(bulletAngle) * 0.2f;
+			bulletPos.y += Mathf.Sin(bulletAngle) * 0.2f;
 
-
-			var bullet = Instantiate(bulletObject, pos, Quaternion.Euler(45, 0, 0)) as GameObject;
-			//bullet.transform.Rotate(new Vector3(1.0f, 0.0f, 0.0f), 10.0f);
-
-			Debug.DrawRay(transform.position, pos, Color.red);
+			var bullet = Instantiate(bulletObject, bulletPos, Quaternion.Euler(0.0f, 0.0f, bulletAngle * Mathf.Rad2Deg)) as GameObject;
+			bullet.GetComponent<BulletBehaviour>().owner = gameObject;
 		}
 	}
 }

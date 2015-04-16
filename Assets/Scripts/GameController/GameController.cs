@@ -85,5 +85,6 @@ public partial class GameController : MonoBehaviour {
 		GUI.Label(new Rect(10, 10, 200, 30), string.Format("HP: {0}/{1}", PlayerHP, PlayerMaxHP));
 		GUI.Label(new Rect(10, 30, 200, 30), string.Format("Map: {0}", PlayerMap));
 		GUI.Label(new Rect(10, 50, 200, 30), string.Format("Position: ({0},{1})", PlayerX, PlayerY));
+		GUI.Label(new Rect(10, 70, 200, 30), string.Format("Mouse Angle: {0}", MouseAngle));
 	}
 }

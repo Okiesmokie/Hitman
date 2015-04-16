@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ScreenFader
+  - Projectile
   layers:
   - Default
   - TransparentFX

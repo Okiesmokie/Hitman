@@ -68,5 +68,15 @@ public partial class GameController {
 			SetFlag<bool>("PlayerCanMove", value);
 		}
 	}
+
+	public float MouseAngle {
+		get {
+			return GetFlag<float>("MouseAngle");
+		}
+
+		set {
+			SetFlag<float>("MouseAngle", value);
+		}
+	}
 	#endregion
 }

@@ -55,10 +55,9 @@ public partial class PlayerCharacter : MonoBehaviour {
 	// Update is called once per frame
 	protected void Update () {
 		UpdateMovement();
-		//FireWeapon();
+		FireWeapon();
 	}
 
-	/*
 	protected IEnumerator OnLevelWasLoaded(int level) {
 		GameController.instance.PlayerMap = Application.loadedLevelName;
 
@@ -67,5 +66,5 @@ public partial class PlayerCharacter : MonoBehaviour {
 		if(Application.loadedLevelName != "Start") {
 			//ShowCharacter(false);
 		}
-	}*/
+	}
 }
