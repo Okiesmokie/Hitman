@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public partial class GameController : HitmanBase {
+public partial class GameController : Singleton<GameController> {
 	#region Singleton Code
-	public static GameController instance;
+	//public static GameController instance;
 	#endregion
 
 	public GameObject playerGameObject;
@@ -19,13 +19,13 @@ public partial class GameController : HitmanBase {
 			return;
 		}
 
-		#region Singleton Code
+		/*#region Singleton Code
 		if(instance == null) {
 			instance = this;
 		} else if(instance != this) {
 			Destroy(gameObject);
 		}
-		#endregion
+		#endregion*/
 
 		saveFileName = Application.persistentDataPath + "/gamedata_debug.dat";
 
