@@ -61,5 +61,19 @@ public partial class PlayerCharacter {
 			var bullet = Instantiate(bulletObject, bulletPos, Quaternion.Euler(0.0f, 0.0f, bulletAngle * Mathf.Rad2Deg)) as GameObject;
 			bullet.GetComponent<BulletBehaviour>().owner = gameObject;
 		}
+
+		if(Input.GetKeyDown(KeyCode.E)) {
+			if(!GameController.instance.isGamePaused) {
+				GameController.instance.PauseGame();
+			}
+		}
+	}
+
+	protected override void OnUpdatePaused() {
+		if(GameController.instance.isGamePaused) {
+			if(Input.GetKeyDown(KeyCode.E)) {
+				GameController.instance.UnPauseGame();
+			}
+		}
 	}
 }

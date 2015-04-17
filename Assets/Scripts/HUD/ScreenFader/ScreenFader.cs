@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ScreenFader : MonoBehaviour {
+public class ScreenFader : HitmanBase {
 	private bool isFading = false;
 	private Animator animator;
 
@@ -12,9 +12,12 @@ public class ScreenFader : MonoBehaviour {
 
 	void OnAnimationComplete() {
 		isFading = false;
+		GameController.instance.UnPauseGame();
 	}
 
 	public IEnumerator HUD_FadeOut() {
+		GameController.instance.PauseGame();
+
 		isFading = true;
 		animator.SetTrigger("FadeOut");
 
@@ -23,6 +26,8 @@ public class ScreenFader : MonoBehaviour {
 	}
 
 	public IEnumerator HUD_FadeIn() {
+		GameController.instance.PauseGame();
+
 		isFading = true;
 		animator.SetTrigger("FadeIn");
 

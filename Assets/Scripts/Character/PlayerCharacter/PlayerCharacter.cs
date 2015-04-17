@@ -4,7 +4,7 @@ using System.Collections;
 /*
  * PlayerSprite is a class with player-controlled movement
  */
-public partial class PlayerCharacter : MonoBehaviour {
+public partial class PlayerCharacter : HitmanBase {
 	// Properties
 	public GameObject bulletObject;
 
@@ -12,7 +12,7 @@ public partial class PlayerCharacter : MonoBehaviour {
 	protected Animator[] animators;
 
 	// Use this for initialization
-	protected void Start () {
+	protected override void OnStart () {
 		rigidBody = GetComponent<Rigidbody2D>();
 		animators = GetComponentsInChildren<Animator>();
 
@@ -53,7 +53,7 @@ public partial class PlayerCharacter : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	protected void Update () {
+	protected override void OnUpdate () {
 		UpdateMovement();
 		FireWeapon();
 	}

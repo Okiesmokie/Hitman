@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : HitmanBase {
 	public int HP = 10;
 
 	// Use this for initialization

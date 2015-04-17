@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MainCamera : MonoBehaviour {
+public class MainCamera : HitmanBase {
 
 	public Transform target;
 	public float scaleFactor = 4.0f;

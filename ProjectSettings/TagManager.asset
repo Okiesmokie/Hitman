@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ScreenFader
   - Projectile
+  - ProjectilesCategory
   layers:
   - Default
   - TransparentFX

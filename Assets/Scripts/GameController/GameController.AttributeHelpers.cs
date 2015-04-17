@@ -78,5 +78,15 @@ public partial class GameController {
 			SetFlag<float>("MouseAngle", value);
 		}
 	}
+
+	public bool isGamePaused {
+		get {
+			return GetFlag<bool>("isGamePaused", false);
+		}
+
+		set {
+			SetFlag<bool>("isGamePaused", value);
+		}
+	}
 	#endregion
 }

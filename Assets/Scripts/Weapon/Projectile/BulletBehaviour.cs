@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletBehaviour : MonoBehaviour {
+public class BulletBehaviour : HitmanBase {
 	public float angle;
 	public float liveTime = 5.0f;
 
@@ -9,17 +9,15 @@ public class BulletBehaviour : MonoBehaviour {
 
 	protected Rigidbody2D rigidBody;
 
-	// Use this for initialization
-	void Start () {
-		Debug.Log("Bullet created");
-
+	protected override void OnStart () {
 		rigidBody = GetComponent<Rigidbody2D>();
+
+		gameObject.FindParentAndAttach("Projectiles");
 
 		rigidBody.AddForce(transform.right * 100);
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	protected override void OnUpdate () {
 		liveTime -= Time.deltaTime;
 
 		if(liveTime <= 0.0f) Destroy(gameObject);
@@ -27,14 +25,12 @@ public class BulletBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		if(collider.gameObject != owner) {
-			Debug.Log("TRIGGER ENTER");
 			Destroy(gameObject);
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		if(collision.gameObject != owner) {
-			Debug.Log("COLLISION ENTER");
 			Destroy(gameObject);
 		}
 	}

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HUDControl : MonoBehaviour {
+public class HUDControl : HitmanBase {
 	void Start () {
 		DontDestroyOnLoad(gameObject);
 	}

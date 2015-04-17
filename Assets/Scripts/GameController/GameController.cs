@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public partial class GameController : MonoBehaviour {
+public partial class GameController : HitmanBase {
 	#region Singleton Code
 	public static GameController instance;
 	#endregion
@@ -14,7 +14,7 @@ public partial class GameController : MonoBehaviour {
 
 	private bool doScreenFade = false;
 
-	protected virtual void Awake() {
+	protected void Awake() {
 		if(gameObject == null) {
 			return;
 		}
@@ -33,7 +33,7 @@ public partial class GameController : MonoBehaviour {
 		//LoadGame();
 	}
 
-	protected virtual void Start() {
+	protected override void OnStart() {
 		DontDestroyOnLoad(gameObject);
 	}
 
@@ -79,6 +79,16 @@ public partial class GameController : MonoBehaviour {
 		}
 
 		PlayerCanMove = true;
+	}
+
+	public void PauseGame() {
+		Time.timeScale = 0.0f;
+		isGamePaused = true;
+	}
+
+	public void UnPauseGame() {
+		Time.timeScale = 1.0f;
+		isGamePaused = false;
 	}
 
 	protected virtual void OnGUI() {
