@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="2b3df5a5-8305-429f-be2e-41d986eba82f" Title="( Default Namespace )" Url="html/96f28dfd-2c23-c332-ac2f-6930f1f93bf9.htm">
+    <HelpTOCNode Id="10d55c6e-5993-47db-b2e9-774f56669d73" Title="BulletBehaviour Class" Url="html/e8a66e95-a4c7-7399-81c3-48edb8a3341f.htm">
+      <HelpTOCNode Title="BulletBehaviour Constructor " Url="html/33788c7f-2ea7-8b77-8171-4c2e43aa4eed.htm" />
+      <HelpTOCNode Id="c0bd1fe5-2771-4222-9d15-c74af9b57efc" Title="BulletBehaviour Fields" Url="html/bd7f1221-0fd1-fd59-12df-a2b2c7aadefe.htm">
+        <HelpTOCNode Title="angle Field" Url="html/3fcca956-39c3-4fef-8f6e-36bd744a929d.htm" />
+        <HelpTOCNode Title="liveTime Field" Url="html/e02e4b8a-5221-f4af-57b4-b08f1d4fc595.htm" />
+        <HelpTOCNode Title="owner Field" Url="html/b703ef37-5306-3a1c-5d66-7d1d5bf294a0.htm" />
+        <HelpTOCNode Title="rigidBody Field" Url="html/99014dc7-5c36-b90b-0eee-2c930836f3d8.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="32aff914-f7b5-494c-854e-f96de9e2880d" Title="BulletBehaviour Methods" Url="html/b20b199e-3679-7198-29f0-6524e0e87225.htm">
+        <HelpTOCNode Title="OnCollisionEnter2D Method " Url="html/c040a105-756e-6b50-f112-f9278ee9da80.htm" />
+        <HelpTOCNode Title="OnStart Method " Url="html/17c90a87-6f4e-3b09-ff0c-29c0847cd14c.htm" />
+        <HelpTOCNode Title="OnTriggerEnter2D Method " Url="html/98b9e765-1992-d46c-bb7b-8beacd89a152.htm" />
+        <HelpTOCNode Title="OnUpdate Method " Url="html/a36472d5-6ed2-5c99-14ce-82c4a34c1f6c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="BulletBehaviour Properties" Url="html/a6522521-b643-26bd-caf5-336b69d8c7d7.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="77be15c8-4ed1-4ddc-85d1-7419575f0f99" Title="Enemy Class" Url="html/70fb8a2b-7391-13cf-f636-28ea756840a7.htm">
+      <HelpTOCNode Title="Enemy Constructor " Url="html/57a6b14e-3037-e632-2ca3-11a24639e72a.htm" />
+      <HelpTOCNode Id="659bc838-aae3-4aab-9470-e691aa7b1bea" Title="Enemy Fields" Url="html/d534bde9-00f4-d9c8-c1cf-3a3c9d1a85b1.htm">
+        <HelpTOCNode Title="HP Field" Url="html/79d24b37-ed6b-edba-dac3-5937058f6144.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d906f479-74c6-4f98-bc41-06fa7d88a096" Title="Enemy Methods" Url="html/71546b94-ceec-3950-b864-9034f2c9de77.htm">
+        <HelpTOCNode Title="OnStart Method " Url="html/7eba7cc8-8030-6c7d-d3f0-fecdbfe567a6.htm" />
+        <HelpTOCNode Title="OnTriggerEnter2D Method " Url="html/0c525124-3a34-df30-d873-b09b737786d4.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Enemy Properties" Url="html/6389741f-0939-359d-d010-14ab0474dd2b.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="f24b76a7-a616-43ab-b86f-e1b7b4e5ad2f" Title="GameController Class" Url="html/19d56726-4dec-da4c-864e-495837a18f3c.htm">
+      <HelpTOCNode Title="GameController Constructor " Url="html/155bfeec-f95a-7847-740a-9d51c6a5e8ab.htm" />
+      <HelpTOCNode Id="396cdd89-97ff-4fe6-8310-af438765144a" Title="GameController Fields" Url="html/f1d24d8e-6255-4562-a4ff-d87e7e56039b.htm">
+        <HelpTOCNode Title="playerGameObject Field" Url="html/06e48b6b-765e-66d1-d706-6ed98b8798a0.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="230811c0-01b3-4ded-a03b-0a4c1a79de11" Title="GameController Methods" Url="html/99c0899e-b8ff-11ae-28b1-a21e48baa1d1.htm">
+        <HelpTOCNode Title="ChangeMap Method " Url="html/6683da25-8f99-ee63-bb20-24ce8a392eba.htm" />
+        <HelpTOCNode Title="GetFlag(T) Method " Url="html/c65cf941-b0c7-b5bc-334c-fd425169d3eb.htm" />
+        <HelpTOCNode Title="LoadGame Method " Url="html/76698b3d-b6fa-7932-8194-32ccd2f8b9ce.htm" />
+        <HelpTOCNode Title="MapFinishedLoading Method " Url="html/63740cad-a4f5-edd3-5170-754979fa0db5.htm" />
+        <HelpTOCNode Title="OnAwake Method " Url="html/6c3a6b6a-8a03-3d44-0b1e-180c1a00ca99.htm" />
+        <HelpTOCNode Title="OnGUI Method " Url="html/9a07238c-f6c1-1d19-dba9-6ea158a37e43.htm" />
+        <HelpTOCNode Title="OnStart Method " Url="html/debf8109-f3de-615a-6083-f6e45a908f76.htm" />
+        <HelpTOCNode Title="PauseGame Method " Url="html/7df0c3e8-54ca-f2ba-8b2b-a7655b9abe9a.htm" />
+        <HelpTOCNode Title="SaveGame Method " Url="html/765408f1-67a6-17d0-0364-82ca95b5e50b.htm" />
+        <HelpTOCNode Title="SetFlag(T) Method " Url="html/1b27ae40-0194-3a89-0b52-cf32a7596038.htm" />
+        <HelpTOCNode Title="UnPauseGame Method " Url="html/c8c12756-6651-e378-179a-53cf85c82e78.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="eb26604c-8414-4054-9d5f-cc823ee9a236" Title="GameController Properties" Url="html/d76a85df-99b6-9bf1-ca49-0797b3dde9fd.htm">
+        <HelpTOCNode Title="isGamePaused Property " Url="html/a4fa0b55-d3c6-f647-7257-1814c0ee5a97.htm" />
+        <HelpTOCNode Title="MouseAngle Property " Url="html/563a2395-661a-5c42-2a06-b653b969ff88.htm" />
+        <HelpTOCNode Title="PlayerCanMove Property " Url="html/8f6f5058-c405-4374-7f44-b205c3670f52.htm" />
+        <HelpTOCNode Title="PlayerHP Property " Url="html/6d39bba2-2b3b-bffc-6696-df122c7d8a0d.htm" />
+        <HelpTOCNode Title="PlayerMap Property " Url="html/4fb5f9a0-20b9-4ccd-ee94-c5dd2bfc9be1.htm" />
+        <HelpTOCNode Title="PlayerMaxHP Property " Url="html/dc71599c-afe8-bba8-9057-a4dac85780ac.htm" />
+        <HelpTOCNode Title="PlayerX Property " Url="html/230e11a6-881f-8f3d-d20d-6ed2eea369db.htm" />
+        <HelpTOCNode Title="PlayerY Property " Url="html/c4a9cf1c-cb87-d3ba-a322-46db378776cd.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b2d3af3f-641e-46d8-8fc9-c76656e6c772" Title="GameObjectExtensions Class" Url="html/dc6701da-bc9d-3ad3-286d-8bc3ab25ac2e.htm">
+      <HelpTOCNode Id="b327b8a0-e6d7-46d2-95fd-038fe7b9f064" Title="GameObjectExtensions Methods" Url="html/fdc6ae7d-3a6a-424b-1838-22bcb5446012.htm">
+        <HelpTOCNode Title="FindParentAndAttach Method " Url="html/da7b7b84-bc77-6f64-d0c6-67ff4613f1d0.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9ec4ce21-0f61-4c67-886d-1dec2b09df22" Title="HitmanBase Class" Url="html/984abf34-b1de-b972-1424-9f925e6c5f32.htm">
+      <HelpTOCNode Title="HitmanBase Constructor " Url="html/c5e5d88a-c1cf-0220-bc58-ddb1f567013c.htm" />
+      <HelpTOCNode Id="0e9886ce-506f-4b41-b312-cc1cb8e228f9" Title="HitmanBase Methods" Url="html/61120858-8b98-0287-5e93-d4294227b8ed.htm">
+        <HelpTOCNode Title="Awake Method " Url="html/7365ea79-1758-fd61-46ba-b61c2c959b71.htm" />
+        <HelpTOCNode Title="OnAwake Method " Url="html/995ce601-fe4c-7d52-eb7f-ecf395b7d7ac.htm" />
+        <HelpTOCNode Title="OnCollisionEnter2D Method " Url="html/56effa18-d35a-b89e-2fa4-2a85b25a37fb.htm" />
+        <HelpTOCNode Title="OnGUI Method " Url="html/2549ec4a-e9d9-d0ee-2da9-ef63fcf6773b.htm" />
+        <HelpTOCNode Title="OnLevelWasLoaded Method " Url="html/638e2af3-f4fc-b0ab-fcba-8ecb8b06750d.htm" />
+        <HelpTOCNode Title="OnStart Method " Url="html/c13996a3-b2c3-ae48-a065-8de932fbae42.htm" />
+        <HelpTOCNode Title="OnTriggerEnter2D Method " Url="html/7bf9ef68-b807-2a8d-58ef-f56352f37636.htm" />
+        <HelpTOCNode Title="OnUpdate Method " Url="html/709d436d-a83e-4f9c-81b3-205ba3c83cfc.htm" />
+        <HelpTOCNode Title="OnUpdatePaused Method " Url="html/30599c2b-8799-8679-21e5-2ff05bf79957.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/89039f8d-f90a-2b18-61b3-af9350336e8a.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/87039bd8-a2df-c571-fcb5-24bc186c54c4.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="HitmanBase Properties" Url="html/e6f50184-bf51-ef64-a8b2-9add78b2598b.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="d4cdf4d9-54e5-4d03-b3bf-f519e5382731" Title="HUDControl Class" Url="html/f6c2dc7b-f6aa-fb1e-a623-f659be309ab4.htm">
+      <HelpTOCNode Title="HUDControl Constructor " Url="html/229a13bc-9797-01b7-88c1-b04226a1112c.htm" />
+      <HelpTOCNode Id="477cf923-5389-42db-ba41-47cbebd62cf2" Title="HUDControl Methods" Url="html/3116d830-837d-b7cd-cad6-3d2e2d7f09d3.htm">
+        <HelpTOCNode Title="OnStart Method " Url="html/b1be040d-b51d-4184-6060-ff93f03a3861.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="HUDControl Properties" Url="html/b98c275e-5146-1549-d642-3d02efb689ce.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="1982fd6b-3b16-486b-a314-0010c8a7df84" Title="MainCamera Class" Url="html/7e442cad-f119-2ccd-74a7-6df61a1b7388.htm">
+      <HelpTOCNode Title="MainCamera Constructor " Url="html/d290d627-09c1-e6f2-9e47-ba3b398b5c22.htm" />
+      <HelpTOCNode Id="e7dc0e71-09ba-4910-b0d0-386b94546e8c" Title="MainCamera Fields" Url="html/c0a7873d-dcf0-5c20-9f1a-b2a44407c7e1.htm">
+        <HelpTOCNode Title="scaleFactor Field" Url="html/68867658-1b16-0e37-6e18-28bc2cf07526.htm" />
+        <HelpTOCNode Title="target Field" Url="html/a29b6206-6093-fd72-886c-4a4241b502b0.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5b5692f2-54d9-40ee-8946-872b775ed639" Title="MainCamera Methods" Url="html/7f82d4ea-7145-af76-75b2-459fe8e6d5fb.htm">
+        <HelpTOCNode Title="ChangeCameraTarget Method " Url="html/5e95b627-9808-1c99-3f27-37956d57ca19.htm" />
+        <HelpTOCNode Title="MoveCameraInstant Method " Url="html/0373c443-7d7e-c218-4586-a9a0b4d8ada4.htm" />
+        <HelpTOCNode Title="OnStart Method " Url="html/31b6d08b-33ae-4a07-4687-b33c4f334058.htm" />
+        <HelpTOCNode Title="OnUpdate Method " Url="html/694dc05a-927c-acab-e421-01af0924c356.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="MainCamera Properties" Url="html/88fc423e-b5a6-192b-bda4-6832a52f00f0.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="50df160c-a972-47d1-aa4d-fd6d0f4599cd" Title="PlayerCharacter Class" Url="html/1f9d4460-56aa-5c03-1971-7b1188160f2e.htm">
+      <HelpTOCNode Title="PlayerCharacter Constructor " Url="html/8f784440-4a93-c062-1e8f-376dfe287246.htm" />
+      <HelpTOCNode Id="2fae954b-6005-4805-9a83-f13e4fe7b956" Title="PlayerCharacter Fields" Url="html/2d7615c6-b8f8-581b-c86d-0f6f7a0e82b1.htm">
+        <HelpTOCNode Title="animators Field" Url="html/319e47af-9001-102e-14db-5b86642f4f3d.htm" />
+        <HelpTOCNode Title="bulletObject Field" Url="html/7d12ddc7-998f-8e80-c24f-6cc1415f6322.htm" />
+        <HelpTOCNode Title="rigidBody Field" Url="html/463fc478-cd66-6792-5ce7-8c7921b761da.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5667ef53-408a-41b1-8dd6-c03dd8256068" Title="PlayerCharacter Methods" Url="html/1cb1194f-0cc8-1940-b293-c547d9acc139.htm">
+        <HelpTOCNode Title="FireWeapon Method " Url="html/ec662f3c-ff12-ac79-6b6f-fb24bbf3c0ab.htm" />
+        <HelpTOCNode Title="HideCharacter Method " Url="html/d9d7130f-ff6d-776d-cd2f-452f69f296e6.htm" />
+        <HelpTOCNode Title="OnAwake Method " Url="html/b6cd5818-a7e3-6312-affa-3a59e147d8eb.htm" />
+        <HelpTOCNode Title="OnLevelWasLoaded Method " Url="html/bc8081d0-2b3e-03db-45e0-0ad8df3af695.htm" />
+        <HelpTOCNode Title="OnStart Method " Url="html/f71322c4-a3f8-46d7-3bf5-1304e86bba6b.htm" />
+        <HelpTOCNode Title="OnUpdate Method " Url="html/75e3ac6c-5bee-a962-057b-04baaa86548f.htm" />
+        <HelpTOCNode Title="OnUpdatePaused Method " Url="html/642134cb-f35d-3078-175d-7105b9e13f5a.htm" />
+        <HelpTOCNode Title="ShowCharacter Method " Url="html/7a2b2633-b3b3-675c-5094-d15293fa1e61.htm" />
+        <HelpTOCNode Title="UpdateMovement Method " Url="html/8730dfea-f8cf-52c7-2d31-7d531a22125d.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="PlayerCharacter Properties" Url="html/982460ca-9622-9fac-b153-73817149a97a.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="f7888241-b075-4107-a4c9-9170e36e10f3" Title="ScreenFader Class" Url="html/12719345-82cd-efbb-f2a9-ee7020d6e2d7.htm">
+      <HelpTOCNode Title="ScreenFader Constructor " Url="html/f3f3a4e3-c3e7-ab32-21f2-909b2efc833b.htm" />
+      <HelpTOCNode Id="21222b7d-4114-4ff2-9e0e-829ad9300f94" Title="ScreenFader Methods" Url="html/d5c7940b-d915-e279-9041-545a3ea7ffa6.htm">
+        <HelpTOCNode Title="HUD_FadeIn Method " Url="html/465f9bdb-0cdc-80ff-838c-3a53e6f56ba9.htm" />
+        <HelpTOCNode Title="HUD_FadeOut Method " Url="html/aa862c78-d162-83b7-fedd-87007ce190fa.htm" />
+        <HelpTOCNode Title="OnAnimationComplete Method " Url="html/f5163b38-14c2-cd74-eeb8-f59876c8208a.htm" />
+        <HelpTOCNode Title="OnStart Method " Url="html/4e47f856-20d2-9cd9-078e-4bbaf224dccd.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ScreenFader Properties" Url="html/7e7039c4-1f80-f420-2e10-09fdc3123735.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="3921e130-6c33-469e-a1e4-8a28df36aecf" Title="Singleton(T) Class" Url="html/656059b1-c143-a6bf-3b10-2ae719aa1f2d.htm">
+      <HelpTOCNode Title="Singleton(T) Constructor " Url="html/3d12c84e-eac1-8f53-625c-8250b36fd9a4.htm" />
+      <HelpTOCNode Id="a9673054-c3db-4b97-89de-afd8fc602692" Title="Singleton(T) Fields" Url="html/636e6f2d-a786-b947-b2b6-ef5f702b6446.htm">
+        <HelpTOCNode Title="_instance Field" Url="html/6bdbe1a9-b8fd-13e1-6752-450dccf08b37.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Singleton(T) Methods" Url="html/7819ac10-98ea-c991-b88d-38ea1974cda7.htm" />
+      <HelpTOCNode Id="c67a6d71-0e31-4aef-8433-87b94f6c7a5e" Title="Singleton(T) Properties" Url="html/ab555466-d66a-9468-7421-d1937e2792bc.htm">
+        <HelpTOCNode Title="instance Property " Url="html/702d817a-a763-8a51-ada4-da9bbf9e94d3.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

@@ -1,15 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// A base class for enemies.
+/// </summary>
 public class Enemy : HitmanBase {
+
+	/// <summary>
+	/// The enemy's HP.
+	/// </summary>
 	public int HP = 10;
 
-	// Use this for initialization
-	void Start () {
-
+	/// <inheritdoc/>
+	protected override void OnStart () {
 	}
 
-	void OnTriggerEnter2D(Collider2D collider) {
+
+	/// <inheritdoc/>
+	protected override void OnTriggerEnter2D(Collider2D collider) {
 		if(collider.gameObject.tag == "Projectile") {
 			--HP;
 			Debug.Log(string.Format("Enemy hit with bullet;  HP: {0}", HP));
@@ -19,4 +27,5 @@ public class Enemy : HitmanBase {
 			}
 		}
 	}
+
 }

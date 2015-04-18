@@ -1,12 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/// <summary>
+/// A generic class for creating Singletons.
+/// </summary>
+/// <typeparam name="T">The type of the class</typeparam>
 public class Singleton<T> : HitmanBase where T : HitmanBase {
+	/// <summary>
+	/// The instance of the singleton.
+	/// </summary>
 	protected static T _instance;
 
-	/**
-	   Returns the instance of this singleton.
-	*/
+
+	/// <summary>
+	/// Gets the instance of the Singleton.
+	/// </summary>
+	/// <value>
+	/// The instance.
+	/// </value>
 	public static T instance {
 		get {
 			if(_instance == null) {

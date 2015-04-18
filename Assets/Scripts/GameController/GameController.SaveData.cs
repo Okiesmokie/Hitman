@@ -9,6 +9,10 @@ public partial class GameController {
 	#region Saving and Loading Code
 	private string saveFileName;
 
+
+	/// <summary>
+	/// Saves the game.
+	/// </summary>
 	public void SaveGame() {
 		try {
 			using(var fs = new FileStream(saveFileName, FileMode.Create, FileAccess.Write)) {
@@ -22,6 +26,10 @@ public partial class GameController {
 		}
 	}
 
+
+	/// <summary>
+	/// Loads the game.
+	/// </summary>
 	public void LoadGame() {
 		if(File.Exists(saveFileName)) {
 			try {
@@ -43,6 +51,10 @@ public partial class GameController {
 		}
 	}
 
+
+	/// <summary>
+	/// Loads the default flags.
+	/// </summary>
 	private void LoadDefaults() {
 		// Default values for a new game
 		PlayerHP = 100;

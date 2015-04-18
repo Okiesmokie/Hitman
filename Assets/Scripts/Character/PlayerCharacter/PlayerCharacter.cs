@@ -1,17 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-/*
- * PlayerSprite is a class with player-controlled movement
- */
+/// <summary>
+/// The class that controls the behaviour for the Player Character.
+/// </summary>
 public partial class PlayerCharacter : HitmanBase {
-	// Properties
+	/// <summary>
+	/// A reference to the bullet object.
+	/// </summary>
 	public GameObject bulletObject;
 
+	/// <summary>
+	/// The rigid body.
+	/// </summary>
 	protected Rigidbody2D rigidBody;
+
+	/// <summary>
+	/// The animators.
+	/// </summary>
 	protected Animator[] animators;
 
-	// Use this for initialization
+
+	/// <inheritdoc/>
 	protected override void OnStart () {
 		rigidBody = GetComponent<Rigidbody2D>();
 		animators = GetComponentsInChildren<Animator>();
@@ -25,6 +35,11 @@ public partial class PlayerCharacter : HitmanBase {
 		}
 	}
 
+
+	/// <summary>
+	/// Hides the player's sprite and disables the movement based on <paramref name="disableMovement"/>.
+	/// </summary>
+	/// <param name="disableMovement">True if the player's movement should be disabled.</param>
 	protected void HideCharacter(bool disableMovement = false) {
 		if(disableMovement) {
 			GameController.instance.PlayerCanMove = false;
@@ -37,6 +52,11 @@ public partial class PlayerCharacter : HitmanBase {
 		}
 	}
 
+
+	/// <summary>
+	/// Shows the player's sprite and enables the movement based on <paramref name="enableMovement"/>.
+	/// </summary>
+	/// <param name="enableMovement">True if the plaeyr's movement should be enabled.</param>
 	public void ShowCharacter(bool enableMovement = false) {
 		if(!GameController.instance.PlayerCanMove && enableMovement) {
 			GameController.instance.PlayerCanMove = true;
@@ -49,16 +69,31 @@ public partial class PlayerCharacter : HitmanBase {
 		}
 	}
 
-	protected void OnAwake() {
+
+	/// <inheritdoc/>
+	protected override void OnAwake() {
 	}
 	
-	// Update is called once per frame
+
+	/// <inheritdoc/>
 	protected override void OnUpdate () {
 		UpdateMovement();
 		FireWeapon();
 	}
 
-	protected IEnumerator OnLevelWasLoaded(int level) {
+
+	/// <inheritdoc/>
+	protected override void OnUpdatePaused() {
+		if(GameController.instance.isGamePaused) {
+			if(Input.GetKeyDown(KeyCode.E)) {
+				GameController.instance.UnPauseGame();
+			}
+		}
+	}
+
+
+	/// <inheritdoc/>
+	protected override IEnumerator OnLevelWasLoaded(int level) {
 		GameController.instance.PlayerMap = Application.loadedLevelName;
 
 		yield return StartCoroutine(GameController.instance.MapFinishedLoading());

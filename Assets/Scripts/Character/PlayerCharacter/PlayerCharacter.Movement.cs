@@ -2,9 +2,12 @@
 using System.Collections;
 
 public partial class PlayerCharacter {
+
+	/// <summary>
+	/// Handles the player's movement.
+	/// </summary>
 	protected void UpdateMovement () {
 		var movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
 
 		// Face player in the direction of the mouse
 		var screenPos = Camera.main.WorldToScreenPoint(transform.position);
@@ -45,6 +48,10 @@ public partial class PlayerCharacter {
 		}
 	}
 
+
+	/// <summary>
+	/// Handles the player's attacks.
+	/// </summary>
 	protected void FireWeapon() {
 		if(Input.GetMouseButtonDown(0)) {
 			// Get the angle of the bullet
@@ -69,11 +76,4 @@ public partial class PlayerCharacter {
 		}
 	}
 
-	protected override void OnUpdatePaused() {
-		if(GameController.instance.isGamePaused) {
-			if(Input.GetKeyDown(KeyCode.E)) {
-				GameController.instance.UnPauseGame();
-			}
-		}
-	}
 }

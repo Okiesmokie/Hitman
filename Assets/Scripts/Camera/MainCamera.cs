@@ -1,31 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MainCamera : HitmanBase {
+/// <summary>
+/// The class that controls the behaviour of the main camera.
+/// </summary>
+public class MainCamera : Singleton<MainCamera> {
 
+	/// <summary>
+	/// The object the camera will follow.
+	/// </summary>
 	public Transform target;
+
+	/// <summary>
+	/// The scale factor.
+	/// </summary>
 	public float scaleFactor = 4.0f;
 
 	private Camera mainCamera;
 
-	public static MainCamera instance;
-
-	void Awake() {
-		if(instance == null) {
-			instance = this;
-		} else if(instance != this) {
-			Destroy(gameObject);
-		} 
-	}
-
-	// Use this for initialization
-	void Start() {
+	/// <inheritdoc/>
+	protected override void OnStart() {
 		mainCamera = GetComponent<Camera>();
 		DontDestroyOnLoad(gameObject);
 	}
-
-	// Update is called once per frame
-	void Update() {
+	
+	/// <inheritdoc/>
+	protected override void OnUpdate() {
 		mainCamera.orthographicSize = (Screen.height / 100.0f) / scaleFactor;
 
 		if(target) {
@@ -33,11 +33,20 @@ public class MainCamera : HitmanBase {
 		}
 	}
 
+	/// <summary>
+	/// Moves the camera instantaneously.
+	/// </summary>
+	/// <param name="position">The position to move to</param>
 	public void MoveCameraInstant(Vector3 position) {
 		transform.position = position;
 	}
 
+	/// <summary>
+	/// Changes the camera's target.
+	/// </summary>
+	/// <param name="newTarget">The new target.</param>
 	public void ChangeCameraTarget(Transform newTarget) {
 		target = newTarget;
 	}
+
 }
