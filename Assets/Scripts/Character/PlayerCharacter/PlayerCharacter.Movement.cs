@@ -2,6 +2,7 @@
 using System.Collections;
 
 public partial class PlayerCharacter {
+	public float playerSpeed = 1.0f;
 
 	/// <summary>
 	/// Handles the player's movement.
@@ -36,7 +37,7 @@ public partial class PlayerCharacter {
 		if(movementVector != Vector2.zero) {
 			// Player is moving
 
-			rigidBody.MovePosition(rigidBody.position + movementVector * Time.deltaTime);
+			rigidBody.MovePosition(rigidBody.position + (movementVector * playerSpeed) * Time.deltaTime);
 
 			// Update the player X and Y coordinates within the GameControl object
 			GameController.instance.PlayerX = rigidBody.position.x;
